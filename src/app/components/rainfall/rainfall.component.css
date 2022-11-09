@@ -1,0 +1,19 @@
+#map {
+    height: 600px;
+}
+
+.alert_1 {
+    background-color: #7BB31A;
+}
+
+.alert_2 {
+    background-color: #EEDB00;
+}
+
+.alert_3 {
+    background-color: #FFA500;
+}
+
+.alert_4 {
+    background-color: #B22222;
+}

@@ -1,0 +1,47 @@
+<div class="row mb-5">
+    <div class="col-lg-5 mt-3">
+        <div class="card text-start">
+            <div class="card-header">
+                <h5 class="mb-0 py-1 card-title">Wind Gust Alert For Cox's Bazar District</h5>
+            </div>
+            <div class="card-body p-0">
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-7 mt-3">
+        <div class="card text-start">
+            <div class="card-header">
+                <h5 class="mb-0 py-1 card-title">Next 5 Days Weather Forecast of {{selected_upazila}} Upazila</h5>
+                <div class="d-flex justify-content-start mt-1" style="display: block;">
+                    <div class="d-flex align-items-center">
+                        <div style="width: 10px; height: 10px; border-radius: 50%; background-color: #7BB31A;"></div>
+                        <p class="py-0 my-0 mx-2" style="font-size: 10px;">Normal [0-40 km/h]</p>
+                    </div>
+                    <div class="d-flex align-items-center ml-1">
+                        <div style="width: 10px; height: 10px; border-radius: 50%; background-color: #EEDB00;"></div>
+                        <p class="py-0 my-0 mx-2" style="font-size: 10px;">Moderate [40-60 km/h]</p>
+                    </div>
+                    <div class="d-flex align-items-center ml-1">
+                        <div style="width: 10px; height: 10px; border-radius: 50%; background-color: #FFA500;"></div>
+                        <p class="py-0 my-0 mx-2" style="font-size: 10px;">Heavy [60-80 km/h]</p>
+                    </div>
+                    <div class="d-flex align-items-center ml-1">
+                        <div style="width: 10px; height: 10px; border-radius: 50%; background-color: #B22222;"></div>
+                        <p class="py-0 my-0 mx-2" style="font-size: 10px;">Extreme [80 km/h ++]</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body p-0 d-flex">
+                <div class="card flex-fill" *ngFor="let item of alert_value">
+                    <div class="card-body text-center alert_{{item.alert}}">
+                        <h6 class="card-subtitle text-muted">{{item.step_start.substring(0,10)}}</h6>
+                        <h5 class="card-title mb-0">{{item.result}} {{item.unit}}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
